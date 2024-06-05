@@ -1,15 +1,19 @@
 void save() {
+
     static int count1 = 0;
+    
     count1++;
+    
     string Name = to_string(count1) + ".jpg";
+    
     Mat save = canvas(Rect(1, 1, 498, 498)).clone();
+    
     resize(save, save, Size(500, 500));
-    /*
-    cout << "save file name : ";
-    cin >> Name;
-    */
+    
     imwrite(Name, save);
+    
     cout << Name << " file saved" << endl;
+    
 }
 
 여기부분은 입력시에 파일을 저장할때 파일명을 1씩증가하면서 저장하는 방식으로 0~9 까지의 수의 표본을 만들기위한 코드로 작성하였습니다
